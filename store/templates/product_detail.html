@@ -1,0 +1,30 @@
+{% extends "products.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Detail</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Product Detail</h1>
+    <h2>{{ product.name }}</h2>
+    <p>Category: {{ product.category }}</p>
+    <p>Code: {{ product.code }}</p>
+    <p>Amount: {{ product.amount }}</p>
+    <p>Quantity in Stock: {{ product.quantity }}</p>
+    <p>Selling Price: ${{ product.sellp }}</p>
+    
+    <h2>User Information</h2>
+    <p>Name: {{ user.firstname }}</p>
+    <p>Phone: {{ user.phone }}</p>
+    
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endblock %}
+</body>
+</html>

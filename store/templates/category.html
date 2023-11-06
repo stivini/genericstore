@@ -1,0 +1,21 @@
+{% extends 'products.html' %}
+{% load static %}
+
+<body>
+    {% block content %}
+    <h2>categories</h2>
+    {% if data|length == 0 %}
+    <div><p>you have not specified categories yet !</p></div>
+    {% else %}
+    <div>
+        {% for data in data %}
+        <ul>
+            <li>
+                <a href="/store/category/{{data}}/" style="color: black; text-decoration: none;">{{data}} <br></a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endblock %}
+</body>

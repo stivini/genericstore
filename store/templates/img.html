@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% for x in img %}
+<div>{{x}}</div>
+<hr>
+<div>
+    <img src="{{x.image.url}}" alt="{{x.image.url}}">
+</div>
+<hr>
+<div><a href="{{x.image.url}}">{{x}}</a></div>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,591 @@
+[
+    {
+      "model": "store.Category",
+      "pk": 1,
+      "fields": {
+        "name": "Beverage",
+        "quantity": 100
+      }
+    },
+    {
+      "model": "store.Products",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "amount": 0,
+        "name": "powerplay",
+        "code": 12345,
+        "sellp": 25.0,
+        "buyp": 15.0,
+        "quantity": 50,
+        "cart": false,
+        "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+      }
+    },
+    {
+        "model": "store.Products",
+        "pk": 2,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "fanta",
+          "code": 12346,
+          "sellp": 70.0,
+          "buyp": 60.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 3,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "cocacola",
+          "code": 12355,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 4,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "juo",
+          "code": 126445,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 5,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "schweepes",
+          "code": 1234232,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 6,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "lime",
+          "code": 12845,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 7,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "ribena",
+          "code": 12305,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 8,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "lucozade",
+          "code": 42345,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },      
+        {
+          "model": "store.Products",
+          "pk": 19,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 11",
+            "code": 1011,
+            "sellp": 29.99,
+            "buyp": 19.99,
+            "quantity": 35,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 20,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 12",
+            "code": 1012,
+            "sellp": 39.99,
+            "buyp": 29.99,
+            "quantity": 25,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 21,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 13",
+            "code": 1013,
+            "sellp": 24.99,
+            "buyp": 14.99,
+            "quantity": 30,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 22,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 14",
+            "code": 1014,
+            "sellp": 19.99,
+            "buyp": 9.99,
+            "quantity": 20,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 23,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 15",
+            "code": 1015,
+            "sellp": 34.99,
+            "buyp": 24.99,
+            "quantity": 15,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 24,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 16",
+            "code": 1016,
+            "sellp": 44.99,
+            "buyp": 34.99,
+            "quantity": 25,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 25,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 17",
+            "code": 1017,
+            "sellp": 54.99,
+            "buyp": 44.99,
+            "quantity": 40,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 26,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 18",
+            "code": 1018,
+            "sellp": 64.99,
+            "buyp": 54.99,
+            "quantity": 35,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 27,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 19",
+            "code": 1019,
+            "sellp": 74.99,
+            "buyp": 64.99,
+            "quantity": 50,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+        {
+          "model": "store.Products",
+          "pk": 28,
+          "fields": {
+            "category": 1,
+            "amount": 0,
+            "name": "Product 20",
+            "code": 1020,
+            "sellp": 14.99,
+            "buyp": 4.99,
+            "quantity": 10,
+            "cart": false,
+            "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+          }
+        },
+      
+    {
+      "model": "store.Users",
+      "pk": 1,
+      "fields": {
+        "products": 1,
+        "firstname":"User",
+        "phone": 7000000000
+      }
+    },
+    {
+        "model": "store.Products",
+        "pk": 29,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 21",
+          "code": 1021,
+          "sellp": 29.99,
+          "buyp": 19.99,
+          "quantity": 35,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 30,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 22",
+          "code": 1022,
+          "sellp": 39.99,
+          "buyp": 29.99,
+          "quantity": 25,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 31,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 23",
+          "code": 1023,
+          "sellp": 24.99,
+          "buyp": 14.99,
+          "quantity": 30,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 32,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 24",
+          "code": 1024,
+          "sellp": 19.99,
+          "buyp": 9.99,
+          "quantity": 20,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 33,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 25",
+          "code": 1025,
+          "sellp": 34.99,
+          "buyp": 24.99,
+          "quantity": 15,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 34,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 26",
+          "code": 1026,
+          "sellp": 44.99,
+          "buyp": 34.99,
+          "quantity": 25,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 35,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 27",
+          "code": 1027,
+          "sellp": 54.99,
+          "buyp": 44.99,
+          "quantity": 40,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 36,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 28",
+          "code": 1028,
+          "sellp": 64.99,
+          "buyp": 54.99,
+          "quantity": 35,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 37,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 29",
+          "code": 1029,
+          "sellp": 74.99,
+          "buyp": 64.99,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 38,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 30",
+          "code": 1030,
+          "sellp": 14.99,
+          "buyp": 4.99,
+          "quantity": 10,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 39,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 31",
+          "code": 1031,
+          "sellp": 29.99,
+          "buyp": 19.99,
+          "quantity": 35,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 40,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 32",
+          "code": 1032,
+          "sellp": 39.99,
+          "buyp": 29.99,
+          "quantity": 25,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 41,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 33",
+          "code": 1033,
+          "sellp": 24.99,
+          "buyp": 14.99,
+          "quantity": 30,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 42,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 34",
+          "code": 1034,
+          "sellp": 19.99,
+          "buyp": 9.99,
+          "quantity": 20,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 43,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 35",
+          "code": 1035,
+          "sellp": 34.99,
+          "buyp": 24.99,
+          "quantity": 15,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 44,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 36",
+          "code": 1036,
+          "sellp": 44.99,
+          "buyp": 34.99,
+          "quantity": 25,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 45,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 37",
+          "code": 1037,
+          "sellp": 54.99,
+          "buyp": 44.99,
+          "quantity": 40,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 46,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 38",
+          "code": 1038,
+          "sellp": 64.99,
+          "buyp": 54.99,
+          "quantity": 35,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 47,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 39",
+          "code": 1039,
+          "sellp": 74.99,
+          "buyp": 64.99,
+          "quantity": 50,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      },
+      {
+        "model": "store.Products",
+        "pk": 48,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "Product 40",
+          "code": 1040,
+          "sellp": 14.99,
+          "buyp": 4.99,
+          "quantity": 10,
+          "cart": false,
+          "image": "C:/Users/steve/Desktop/generic_store/media/default.PNG"
+        }
+      }
+  ]
+  

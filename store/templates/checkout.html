@@ -1,0 +1,17 @@
+{% extends 'products.html' %}
+{% block content %}
+
+{% for individual in item %}
+{% if individual.cart == True %}
+<div class="border border-dark p-3" style="background: white;">
+    <img src="/static/browse/products/{{individual.name}}.jpeg" alt="">
+    <div>{{individual}}</div>
+    <br>
+    <div>ksh {{individual.sellp}}</div>
+    <br>
+    <div>amount: (<span style="color: aqua;">{{individual.amount}}</span>) total = <span style="color: green;"></span></div>
+</div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

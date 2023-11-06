@@ -1,0 +1,22 @@
+{% extends 'products.html' %}
+<!DOCTYPE html>
+<html>
+{% load static %}
+<html style='backdrop-filter: blur(1px) saturate(7);' lang='en'>
+<head>
+  <meta charset="utf-8">
+  <link rel='stylesheet' href="{% static 'store/signin.css' %}">
+  <link rel='shortcut icon' href='../../media/regularshow.png' type='image/x-icon'>
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+</head>
+{% block content %}
+<body><div id="cen">
+  <h1 id='signin'>LOGIN_IN</h1>
+  <div id='parent'>
+  <main>
+  </main></div>
+  <p style="display: flex; align-items: center; justify-content: center;">don't have an account ? signin <a href=''>here</a></p>
+  <p style="display: flex; align-items: center; justify-content: center;"><a href="/store/products/">view our products</a></p></div>
+  {% endblock %}
+</body>
+</html>

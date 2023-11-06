@@ -1,0 +1,41 @@
+{% extends 'products.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html style='backdrop-filter: blur(1px) saturate(7);' lang='en'>
+<head>
+    <link rel='stylesheet' href="{% static 'css\bootstrap.css' %}">
+    <link rel='shortcut icon' href='../../media/regularshow.png' type='image/x-icon'>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>steve arts | LOG IN</title>
+</head>
+<body>
+    {% block content %}
+	<div class="container">
+    <h1 id='signin'>LOGIN IN</h1>
+    <div class='container'>
+        <form action="\store\products\" method="post">
+            {% csrf_token %}
+            <div style="display: block;">
+                {{form.first_name.label_tag}}
+                {{form.first_name}}
+            </div>
+            <br>
+            <div>
+                {{form.password.label_tag}}
+                {{form.password}}
+            </div>
+            <br>
+            <div>
+            <input type="submit" value="login">
+            </div>
+        </form> 
+    </div>
+    <p style="display: flex; align-items: center; justify-content: center;">don't have an account ? signin <a href=''>here</a></p>
+    <p style="display: flex; align-items: center; justify-content: center;"><a href="{% url 'store:prods' %}">view our products</a></p></div>
+    {% endblock %}
+</body>
+<script>
+</script>
+</html> 

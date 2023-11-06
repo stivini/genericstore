@@ -1,0 +1,41 @@
+{% extends 'products.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="font-family: sans-serif;">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'browse\product2.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+</head>
+{% block content %}
+<body>
+	<p>user: {{logged_in_user}}</p>
+	<div class="row">
+		<div class="col-6 col-md-2 mb-4 mt-4">
+		  <div class="card m-1 text-truncate overflow-hidden">
+			<img src="{{default_thumbnail.image.url}}" class="card-img-top" alt="Placeholder Image">
+			<div class="card-body">
+			  <h5 class="card-title">{{info.name}}</h5>
+			  <p class="card-text">ksh {{info.sellp}}</p>
+			  <!--a href="#" class="btn btn-primary">Learn More</a-->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="m-1">
+	    <form action="" method="post">
+		{% csrf_token %}
+		{{form.amount}}
+		{{form.amount.errors}}
+		{{form.cart.errors}}    
+		<input type="submit" value="order" style="margin-left: 0px; height: 35px; border-radius: 0vw 0.3vw 0.3vw 0vw; border-style: groove;border-width: .1vw;border-color: grey;">
+		</form>
+		{{amount}}
+        {% endblock %}
+	</div>
+	</div>
+
+</body>
+</html>

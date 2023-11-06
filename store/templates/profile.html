@@ -1,0 +1,28 @@
+{% extends 'products.html' %}
+{% load static %}
+<html>
+<head>
+    <link rel='stylesheet' href="{% static 'browse\css\bootstrap.css' %}">
+    <link rel='shortcut icon' href='../../media/regularshowcpy2.png' type='image/x-icon'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	{% block content %}
+	<h2>Profile</h2>
+	<div class="card m-1" style="width: 200px;">
+		<img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image">
+		<div class="card-body">
+		  <h5 class="card-title">{{user}}</h5>
+		  <p class="card-text"></p>
+		  <!--a href="#" class="btn btn-primary">Learn More</a-->
+		</div>
+  <div class="mb-3">
+  {% csrf_token %}
+  <input class="form-control" type="file" id="formFile">
+	</div>
+  	</div>
+	{% endblock %}
+</body>
+</html>

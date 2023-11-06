@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html style='backdrop-filter: blur(1px) saturate(7);' lang='en'>
+<head>
+    <link rel='stylesheet' href="{% static 'browse\signin.css' %}">
+    <link rel='shortcut icon' href='../../media/regularshow.png' type='image/x-icon'>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>steve arts | SIGN IN</title>
+</head>
+<body>
+    <h1 id='signin'>SIGN IN</h1>
+    <div id='parent'>
+        <form action="\browse\test\" method="post">
+        {% csrf_token %}
+            <input type="button" value="signin" onclick="mk()">
+        </form> 
+    </div>
+    <p style="display: flex; align-items: center; justify-content: center;">have an account ? login <a href='{% url "browse:login" %}'>here</a></p>
+    <p style="display: flex; align-items: center; justify-content: center;"><a href="{% url 'browse:prod' %}">view our products</a></p>
+</body>
+<script src="{% static 'browse\display.js' %}">
+</script>
+</html> 

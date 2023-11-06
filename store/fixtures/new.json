@@ -1,0 +1,25 @@
+[
+    {
+      "model": "store.Category",
+      "pk": 1,
+      "fields": {
+        "name": "Beverage",
+        "quantity": 100
+      }
+    },
+      {
+        "model": "store.Products",
+        "pk": 1,
+        "fields": {
+          "category": 1,
+          "amount": 0,
+          "name": "powerplay",
+          "code": 12345,
+          "sellp": 25.0,
+          "buyp": 15.0,
+          "quantity": 50,
+          "cart": false,
+          "image": "C/Users/steve/Desktop/bingo_store/bingostore/store/static/products/cocacola.jpeg"
+        }
+      }
+    ]

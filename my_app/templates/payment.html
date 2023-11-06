@@ -1,0 +1,27 @@
+{% extends "products.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container p-3">
+        <form action="/mpesa/" method="post">
+        {% csrf_token %}
+        {{form.phone_no.label}}
+        {{form.phone_no}}
+        {{form.phone_no.errors}}
+        <br>
+        amount : {{amt}}
+        phone : {{phone}}
+        <input type="submit">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>
