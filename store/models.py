@@ -28,36 +28,15 @@ class Products(models.Model):
     
     id = models.AutoField(primary_key=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    # this is the orderd amounts
-    amount = models.IntegerField(default=0)
+    order_amount = models.IntegerField(default=0)
     name = models.CharField(max_length=200)
     code = models.IntegerField(unique=True)
     sellp = models.FloatField()
     buyp = models.FloatField(default=0)
-    # this is the number of Product instance in stock
-    quantity = models.IntegerField(default=0,)
+    quantity_in_stock = models.IntegerField(default=0,)
     cart = models.BooleanField(default=False)
     image = models.ImageField(upload_to='products/', null=True)
 
-        
-    def cart_data(self):
-        if self.amount>0:
-            return int(0)
-        elif self.amount == 0:
-            return int(0)
-        else:
-            return int(0)
-
-        
-    def group_by_category(self):
-        cat = self.category
-        return cat
-    
-    def get_total(self):
-        a=self.amount
-        b=self.sellp
-        c=a*b
-        return c    
 
 
 class Users(User):
@@ -67,5 +46,6 @@ class Users(User):
     products = models.ManyToManyField(Products, default='none',related_name='user_products')
     firstname = models.CharField(max_length=200)
     phone = models.IntegerField(unique=True)
+    image = models.ImageField(upload_to='users/', null=True)
 
 

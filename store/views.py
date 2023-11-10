@@ -68,8 +68,14 @@ def spesscat(request,name):
     return render(request, 'spesscat.html', {'info':info, 'prods':prods})
 
 def remove(request,name):
-    info = Products.objects.get(name__startswith=name)
-    info.amount = 0
+    if request.user.is_authenticated:
+        logged_in_user = request.user
+    
+    info = Products.objects.get(name=name)
+    user = Users.objects.get(username=logged_in_user)
+    user.products.remove(info)
+
+    info.order_amount = 0
     info.cart = False
     info.save()
     return cart(request)
@@ -80,22 +86,22 @@ def spesproducts(request,name):
     if request.user.is_authenticated:
         logged_in_user = request.user
 
+    info = Products.objects.get(name=name)
     active_user = Users.objects.get(username=logged_in_user)
-    info = Products.objects.get(name__startswith=name)
-    inf = active_user.products.get(name__startswith=name)
+    active_user.products.add(info)
     
 
     if request.method=='POST':
         form = ProductsForm(request.POST)
         if form.is_valid():
             amt = form.cleaned_data['amount']
-            inf.cart = True
-            inf.amount=amt
-            inf.save()
+            info.cart = True
+            info.order_amount=amt
+            info.save()
             return cart(request)
     else:
         form = ProductsForm()
-    return render(request, 'product2.html', {'info':inf, 'form': form, 'default_thumbnail':default_thumbnail, 'logged_in_user':logged_in_user})
+    return render(request, 'product2.html', {'info':info, 'form': form, 'default_thumbnail':default_thumbnail, 'logged_in_user':logged_in_user})
 
 def login(request):
     if request.method=='POST':
@@ -120,6 +126,7 @@ def test(request):
 	return render(request, 'modeltemp.html')
 	
 def profile(request):
+    
 	return render(request, 'profile.html')
 	
 def checkout(request):	
@@ -130,7 +137,7 @@ def total_to_checkout():
     pass
     # multiplies amount by selling price
     # adds subtotals together for full price checkout
-    data = Products.objects.values_list('amount', 'sellp')
+    data = Products.objects.values_list('order_amount', 'sellp')
     result = []
     for nested_tuple in data:
         multiply = nested_tuple[0]*nested_tuple[1]
@@ -142,10 +149,10 @@ def purchase_product(request, username, name):
     product = get_object_or_404(Products, name=name)
     user = get_object_or_404(Users, username=username)
 
-    if product.amount > 0 and product.quantity > 0:
+    if product.order_amount > 0 and product.quantity > 0:
         # Perform the purchase logic here, for example, updating product quantity and user's purchased products
-        product.amount -= 1
-        product.quantity -= 1
+        product.order_amount -= 1
+        product.quantity_in_stock -= 1
         product.save()
 
         # Add the purchased product to the user's products using the foreign key relationship
